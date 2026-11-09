@@ -21,6 +21,18 @@ Every row is tagged **official** (with the developers.facebook.com link) or **fi
 
 Tested with and without the skill on 3 real cases. Without it, the agent suggested the partner-sharing route that kept failing in practice, and missed the 10-per-72-h registration limit. With it, the agent found the cause in all 3 cases.
 
+## See the difference
+
+> **You:** Connect my client's number to our WhatsApp bot.
+
+**Without the skill:** it suggests the partner-sharing route that keeps failing, misses the registration limit, and you spend a week in Meta dead ends.
+
+**With the skill:** it follows the safe order (portfolio, account, number, app, token, webhook, PIN), reads back every step, and looks up real error codes in its table. In 3 real cases it found the cause every time.
+
+**Skip it if** you only need to send messages from a number that is already connected.
+
+**Status:** in daily use in the author's own setup. Plain instructions, no scripts, no network calls. MIT. Issues and suggestions welcome.
+
 ## Install
 
 ```bash
@@ -47,6 +59,30 @@ Or copy `skills/whatsapp-number-onboarding/` into `~/.claude/skills/`.
 - una tabla de los bloqueos reales con su código de error oficial y su arreglo, marcando qué es oficial y qué está probado en la práctica.
 
 Instalar: `npx skills add RabbitDesigns22/whatsapp-number-onboarding`
+
+## More skills from the same setup
+
+These come from one real workflow: a small agency run with 15+ Claude Code sessions in parallel. Each skill fixes one problem that kept happening there.
+
+| Skill | What it fixes |
+|---|---|
+| [one-pass](https://github.com/RabbitDesigns22/one-pass) | get it right the first time; stop paying tokens for rework |
+| [hora-exacta](https://github.com/RabbitDesigns22/hora-exacta) | real date and time in every message, so nothing lands on the wrong day |
+| [hands-on](https://github.com/RabbitDesigns22/hands-on) | the agent does what it can and only asks you for codes, keys and payments |
+| [easy-for-them](https://github.com/RabbitDesigns22/easy-for-them) | steps people actually follow: direct link, one action per line |
+| [one-answer](https://github.com/RabbitDesigns22/one-answer) | one thought-through answer instead of plan, fix, new plan |
+| [never-twice](https://github.com/RabbitDesigns22/never-twice) | a shared error log so no session repeats a known mistake |
+| [report-now](https://github.com/RabbitDesigns22/report-now) | status checked live this minute, stamped with the time |
+| [sort-me-out](https://github.com/RabbitDesigns22/sort-me-out) | one ordered list of what is urgent, waiting and forgotten |
+| [in-the-loop](https://github.com/RabbitDesigns22/in-the-loop) | a live board so parallel sessions know what the others changed |
+| [study-first](https://github.com/RabbitDesigns22/study-first) | reads everything in full and answers point by point, no invented details |
+| [session-watchdog](https://github.com/RabbitDesigns22/session-watchdog) | wakes the sessions that got stuck mid-task, leaves the rest alone |
+| [skill-harvest](https://github.com/RabbitDesigns22/skill-harvest) | reads your sessions and finds the skills you are missing |
+| [small-budget-ads](https://github.com/RabbitDesigns22/small-budget-ads) | Meta Ads rules for 1-5 USD a day ad sets |
+| [whatsapp-closer](https://github.com/RabbitDesigns22/whatsapp-closer) | evidence-ranked rules for a WhatsApp sales assistant that closes |
+| [proposal-pdf](https://github.com/RabbitDesigns22/proposal-pdf) | short PDF proposals with every price checked against its source |
+
+If one of them saved you a redo, a star helps other people find it.
 
 ## License
 
