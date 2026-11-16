@@ -36,7 +36,7 @@ Tested with and without the skill on 3 real cases. Without it, the agent suggest
 ## Install
 
 ```bash
-npx skills add RabbitDesigns22/whatsapp-number-onboarding
+npx skills@1.8.1 add https://github.com/RabbitDesigns22/whatsapp-number-onboarding/tree/d76a1b0bd6146f58f0570bc16d7f84d241b5af3a
 ```
 
 Or copy `skills/whatsapp-number-onboarding/` into `~/.claude/skills/`.
@@ -58,7 +58,7 @@ Or copy `skills/whatsapp-number-onboarding/` into `~/.claude/skills/`.
 - la comprobación después de cada paso;
 - una tabla de los bloqueos reales con su código de error oficial y su arreglo, marcando qué es oficial y qué está probado en la práctica.
 
-Instalar: `npx skills add RabbitDesigns22/whatsapp-number-onboarding`
+Instalar: `npx skills@1.8.1 add https://github.com/RabbitDesigns22/whatsapp-number-onboarding/tree/d76a1b0bd6146f58f0570bc16d7f84d241b5af3a`
 
 ## More skills from the same setup
 
