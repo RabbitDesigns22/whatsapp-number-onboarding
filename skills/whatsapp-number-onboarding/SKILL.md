@@ -84,6 +84,8 @@ The display name can stay "in review" for days while the number already works `[
 | 131026 | Recipient can't receive (no WhatsApp, old version, terms) | Reach them another way | [error codes][ec] |
 | 131031 | WABA restricted for a policy violation | See Policy Enforcement and the Health Status API | [error codes][ec] |
 | Can't link the number to the Facebook page for click-to-WhatsApp ads | Display name still in review (likely) | Wait for approval, then Page → Linked accounts → WhatsApp | `[unconfirmed]` |
+| "Insufficient permission" ("Permiso insuficiente") when linking the number to the Facebook page (Page → Linked accounts → WhatsApp) | The profile doing it has only ads access to the page. Spot it before trying: on the page, "Manage page" shows Settings and Insights greyed out with ⊘ | The page owner gives that profile **full control** (Settings → Page access). Requesting full page access from the number's new portfolio ("Request shared access") did not work: error 1675030 "Error performing the action", in an unverified 2-week-old portfolio | `[field]` |
+| "We're having trouble sending the code" when adding the number | Number typed wrong (one extra leading digit) | Check the number digit by digit, country code in its own field | `[field]` |
 
 [ec]: https://developers.facebook.com/docs/whatsapp/cloud-api/support/error-codes
 [reg]: https://developers.facebook.com/docs/whatsapp/cloud-api/reference/registration
